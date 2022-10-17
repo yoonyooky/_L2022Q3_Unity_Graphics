@@ -30,9 +30,9 @@ Shader "My/SurfaceShader/LerpAlpha"
             //o.Albedo = c.rgb;
             //o.Albedo = lerp(c.rgb, d.rgb, _LerpRange);
 
-            o.Albedo = lerp(c.rgb, d.rgb, d.a);
+            //o.Albedo = lerp(c.rgb, d.rgb, d.a);
             //o.Albedo = lerp(c.rgb, d.rgb, 1-d.a);
-            //o.Albedo = lerp(d.rgb, c.rgb, d.a);            
+            o.Albedo = lerp(d.rgb, c.rgb, d.a);            
             
             o.Alpha = c.a;
         }

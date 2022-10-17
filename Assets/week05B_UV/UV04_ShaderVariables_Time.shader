@@ -19,12 +19,12 @@ Shader "My/SurfaceShader/UV_Time"
         };
 
         // https://docs.unity3d.com/kr/current/Manual/SL-UnityShaderVariables.html
-        /*******************************************
+       
         _Time.x = 1/20, _Time.y = 1, _Time.z = 2, _Time.w = 3 
         _SinTime.x = t/8, _SinTime.y = t/4, _SinTime.z = t/2, _SinTime.w = t
         _CosTime.x = t/8, _CosTime.y = t/4, _CosTime.z = t/2, _CosTime.w = t
         unity_DeltaTime.x = dt, unity_DeltaTime.y = 1/dt, unity_DeltaTime.z = smoothDt, unity_DeltaTime.w = 1/smoothDt 
-        *******************************************/
+        
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
             fixed4 c = tex2D (_MainTex, IN.uv_MainTex + _Time.y); // x, y 축으로 _Time.y = 1 만큼 이동
